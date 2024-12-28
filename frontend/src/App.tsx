@@ -15,7 +15,7 @@ const App = () => (
             target="_blank"
             rel="noopener noreferrer"
         >
-          Do not learn React
+          Please do not learn React
         </a>
       </header>
     </div>

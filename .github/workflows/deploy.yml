@@ -1,4 +1,4 @@
-name: Deploy website
+name: Deploy React App to GitHub Pages
 
 on:
   push:
@@ -9,27 +9,25 @@ on:
 permissions:
   pages: write
   id-token: write
-  contents: read
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
+          node-version: 18
+      - name: Install Dependencies
+        run: yarn install
+      - name: Build React App
+        run: yarn run build
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
 
   deploy:
     environment:

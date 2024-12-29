@@ -13,7 +13,7 @@ const H1 = styled.text`
 const H2 = styled.text`
     font-size: 28px;
     color: black;
-    font-family: 'Brush Script MT';
+    font-family: 'Brush Script MT' Verdana;
 `;
 
 const App = (): React.ReactElement => {

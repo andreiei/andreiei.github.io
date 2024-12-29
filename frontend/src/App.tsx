@@ -21,7 +21,7 @@ const App = (): React.ReactElement => {
         <div className="App">
             <header className="App-header">
                 <H1>I SPREAD JOY</H1>
-                <H2>(in my own way)</H2>
+                <H2>(in my own way..)</H2>
                 <img src={logo} className="App-logo" alt="logo" />
             </header>
         </div>

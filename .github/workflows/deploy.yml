@@ -1,4 +1,4 @@
-name: Deploy React App to GitHub Pages
+name: Deploy app
 
 on:
   push:
@@ -19,7 +19,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4

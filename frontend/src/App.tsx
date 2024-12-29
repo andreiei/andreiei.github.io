@@ -1,31 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+import styles from './App.module.scss';
 import logo from './wow.jpg';
-import './App.css';
 
-const H1 = styled.text`
-    font-size: 60px;
-    color: hotpink;
-    font-weight: bold;
-    font-family: Verdana;
-`;
-
-const H2 = styled.text`
-    font-size: 28px;
-    color: black;
-    font-family: 'Brush Script MT' Verdana;
-`;
-
-const App = (): React.ReactElement => {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <H1>I SPREAD JOY</H1>
-                <H2>(in my own way..)</H2>
-                <img src={logo} className="App-logo" alt="logo" />
-            </header>
+const App = (): React.ReactElement => (
+    <div className={styles.app}>
+        <div className={styles.content}>
+            <div className={styles.textWrapper}>
+                <div className={styles.h1}>I SPREAD JOY</div>
+                <div className={styles.h2}>(in my own way)</div>
+            </div>
+            <img src={logo} className={styles.logo} alt="logo" />
         </div>
-    );
-};
+    </div>
+);
 
 export default App;

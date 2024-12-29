@@ -34,9 +34,9 @@ jobs:
       - name: Build React App
         run: yarn run build
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: "./build"
+          path: "./frontend/build"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -3,10 +3,10 @@ const customRules = {
     'prettier/prettier': [
         'error',
         {
-            tabWidth: 4, // Set the tab width to 4 spaces
-            useTabs: false, // Use spaces instead of tabs
-            semi: true, // Ensure semicolons are used
-            singleQuote: true, // Use single quotes for strings
+            tabWidth: 4,
+            useTabs: false,
+            semi: true,
+            singleQuote: true,
         },
     ],
     'react/function-component-definition': [

@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './App.module.scss';
 import happyAndrei from './happy_andrei.jpg';
 import madAndrei from './mad_andrei.jpg';
 
 const App: () => React.ReactElement = (): React.ReactElement => {
     const [showHappy, setShowHappy] = useState<boolean>(true);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setShowHappy(prev => !prev);
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className={styles.app}>
             <div className={styles.content}>
